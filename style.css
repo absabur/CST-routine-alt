@@ -82,7 +82,7 @@ tr p{
     border: 4px dotted red;
     transition: all 0.7s;
     font-weight: bolder;
-    font-size: 1rem;
+    font-size: 1.05rem;
     cursor: pointer;
 }
 
@@ -188,6 +188,7 @@ tr p:hover{
         transform: scale(0.28);
     }
 }
+
 @media screen and (max-width: 380px) {
     table{
         transform: scale(0.25);
