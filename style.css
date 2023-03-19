@@ -188,3 +188,8 @@ tr p:hover{
         transform: scale(0.28);
     }
 }
+@media screen and (max-width: 380px) {
+    table{
+        transform: scale(0.25);
+    }
+}
