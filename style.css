@@ -5,14 +5,20 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html{
+    background-color: antiquewhite;
+    height:auto;
+}
 .main{
+    position: relative;
     width: 100%;
+    height: max-content;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     font-family: 'Josefin Sans', sans-serif;
-    transition: all 0.7s;
+    transition: all 0.5s;
     background-color: antiquewhite;
 }
 .cap{
@@ -24,8 +30,9 @@
     padding: 10px;
     border-radius: 10px;
     border: 2px dashed red;
-    transition: all 0.7s;
+    transition: all 0.5s;
     font-size: 1.3rem;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 .cap img{
     height: 100px;
@@ -46,7 +53,7 @@
     background-color: aqua;
     transition: all 0.4s;
     font-weight: bolder;
-
+    box-shadow: 0 0 20px black;
 }
 .landscape{
     display: none;
@@ -57,14 +64,24 @@
 }
 
 table{
-    margin-top: 20px;
-    transition: all 1s;
+    position: absolute;
+    left: 20px;
+    top: 300px;
+    margin-top: 60px;
+    transition: all 0.5s;
+    overflow-x: auto;
 }
+table::after{
+    clear: both;
+    display: table;
+    content: '';
+ }
 
 th{
     min-width: 160px;
     width: 100%;
 }
+
 th , td{
     padding: 3px;
 }
@@ -84,6 +101,7 @@ tr p{
     font-weight: bolder;
     font-size: 1.05rem;
     cursor: pointer;
+    box-shadow: 0 0 20px black;
 }
 
 tr p:hover{
@@ -98,9 +116,10 @@ tr p:hover{
     justify-content: center;
     margin-top: 50px;
     width: 400px;
-    height: 500px;
+    height: 580px;
     border-radius: 10px;
     border: 4px dashed rgb(27, 116, 53);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
     line-height: 27px;
     display: none;
     transition: all 1s;
@@ -128,51 +147,41 @@ tr p:hover{
     height: 50%;
 }
 
-@media screen and (max-width: 1270px) {
-    
-    table{
-        transform: scale(0.77);
-    }
+.footer{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
 }
-
-@media screen and (max-width: 1120px) {
-    
-    table{
-        transform: scale(0.67);
-    }
+.footer span a{
+    color: red;
+    padding: 5px;
 }
 
 @media screen and (max-width: 992px) {
     
-    table{
-        transform: scale(0.58);
-    }
     .cap{
         width: 70%;
     }
 }
 
+
 @media screen and (max-width: 768px) {
     
-    table{
-        margin-top: -150px;
-        transform: scale(0.48);
-    }
+    
     #details{
         transform: scale(0.8);
     }
-    .default{
-        transform: rotate(90deg) scale(0.5);
-        margin-top: 30px;
-    }
-    .det-style{
-        transform: rotate(90deg) scale(0.5);
-    }
+    
 }
+
+
 @media screen and (max-width: 620px) {
-    table{
-        transform: scale(0.38);
-    }
+   
     #details{
         transform: scale(0.6);
     }
@@ -182,15 +191,11 @@ tr p:hover{
     .landscape{
         display: block;
     }
-}
-@media screen and (max-width: 450px) {
-    table{
-        transform: scale(0.28);
+    .footer{
+        height: 80px;
+        font-size: 1rem;
     }
-}
-
-@media screen and (max-width: 380px) {
-    table{
-        transform: scale(0.25);
+    .footer span a{
+        padding: 3px;
     }
 }
