@@ -26,8 +26,6 @@ const display = (image, sub, code, day, room, period, name, number, email) => {
     day = day[0].toUpperCase() + day.slice(1).toLowerCase();
     details.style.display = "flex";
     table.style.display = "none";
-    landscape.style.display = "none";
-    cap.style.display = "none";
     img.innerHTML = `<img src="images/${image}.jpg" alt="">`;
     para.innerHTML = `
     <b>Teacher name  :</b> ${name}<br>
