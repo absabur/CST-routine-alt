@@ -59,9 +59,7 @@ body{
     font-weight: bolder;
     box-shadow: 0 0 20px black;
 }
-.landscape{
-    display: none;
-}
+
 
 .btn:hover{
     background-color: tomato;
@@ -112,11 +110,13 @@ tr p:hover{
 
 
 #details{
+    position: absolute;
+    top: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-bottom: 50px;
     width: 400px;
     height: 580px;
     border-radius: 10px;
@@ -192,9 +192,6 @@ tr p:hover{
     }
     .cap{
         width: 80%;
-    }
-    .landscape{
-        display: block;
     }
     .footer{
         height: 80px;
