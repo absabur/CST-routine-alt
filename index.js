@@ -69,7 +69,7 @@ for (let i = 0 ; i<DI.length ; i++){
             day = "THURSDAY";
             period = "1:30-2:15 "
         }
-        display("uh", "Digital Electronics-I", "26831", day, room, period, "N/A", "N/A", "N/A");
+        display("uh", "Digital Electronics-I", "26831", day, room, period, "Sumon reja", "01751378174", "N/A");
     })
 }
 
