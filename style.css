@@ -118,7 +118,7 @@ tr p:hover{
     justify-content: center;
     margin-bottom: 50px;
     width: 400px;
-    height: 580px;
+    min-height: 520px;
     border-radius: 10px;
     border: 4px dashed rgb(27, 116, 53);
     box-shadow: 0 0 20px rgb(0, 0, 0);
