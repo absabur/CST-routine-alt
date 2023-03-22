@@ -145,7 +145,7 @@ for (let i = 0 ; i<M3.length ; i++){
             day = "THURSDAY";
             period = "3:45 - 4:30"
         }
-        display("uh", "Mathematics-III", "25931", day, room, period, "N/A", "N/A", "N/A");
+        display("uh", "Mathematics-III", "25931", day, room, period, "মোঃ ইব্রাহীম সরকার বিপুল ", "01750776675", "N/A");
     })
 }
 
