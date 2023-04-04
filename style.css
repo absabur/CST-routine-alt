@@ -41,6 +41,22 @@ body{
     margin-right: 10px;
 }
 
+.current-date{
+    position: absolute;
+    top: 380px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+}
+.time, .dates{
+    width: 50%;
+    text-align: center;
+    color: black;
+}
+
 .color-sec{
     position: absolute;
     top: 300px;
@@ -68,7 +84,7 @@ body{
 table{
     position: absolute;
     left: 30px;
-    top: 350px;
+    top: 450px;
     margin-top: 60px;
     padding-right: 30px;
     padding-bottom: 60px;
