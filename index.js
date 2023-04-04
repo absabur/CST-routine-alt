@@ -9,6 +9,8 @@ const backR = details.querySelector(".back-r");
 const color = document.querySelector(".color-change");
 const p = document.querySelectorAll("p");
 const colorSec = document.querySelector(".color-sec");
+const dates = document.querySelector(".dates");
+const time = document.querySelector(".time");
 
 const SS = table.querySelector(".SS");
 const DI = table.querySelectorAll(".DI");
@@ -194,4 +196,58 @@ color.addEventListener("click",function(){
         x = 0;
     }
 })
+
+// =============================================
+// date time
+
+const showTime = () =>{
+    let date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    let amPm = "";
+    let bar = date.getDate();
+    let month = date.getMonth();
+    let year = date.getFullYear();
+    
+
+    if(hours>=12){
+        amPm = " PM";
+    }else{
+        amPm = " AM";
+    }
+    hours = formatHour(hours);
+    hours = formate(hours);
+    minutes = formate(minutes);
+    seconds = formate(seconds);
+    bar = formate(bar);
+    month = formate(month);
+
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    let day = weekday[date.getDay()];
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    let monthName = months[date.getMonth()];
+
+    dates.textContent = bar + " " + monthName + " " + year + ", " +day;
+    time.textContent = hours + ":" + minutes + ":" + seconds + amPm;
+}
+
+const formate = (val) =>{
+    if(val < 10){
+        val = "0"+ val;
+    }
+    return val;
+}
+const formatHour = (val) =>{
+    if(val>12){
+        let extra = val - 12;
+        val = extra;
+    }else if(val == 0){
+        val = 12;
+    }
+    return val;
+}
+
+showTime();
+setInterval(showTime,1000);
 
